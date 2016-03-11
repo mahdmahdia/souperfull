@@ -226,177 +226,190 @@ function create_config( )
     "leave_ban",
     "admin"
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {184111248,83798403},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
-
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+    about_text = [[
+    asan kir to konet mosh kelie ?
 ]],
     help_text_realm = [[
 Realm Commands:
 
 !creategroup [name]
 Create a group
+ساخت گروه
 
 !createrealm [name]
 Create a realm
+ساخت گپ مادر
 
 !setname [name]
-Set realm name
-
+Set group name
+قفل کردن اسم
 !setabout [group_id] [text]
 Set a group's about text
+تنظیم درباره گروه
 
 !setrules [grupo_id] [text]
 Set a group's rules
+تنظیم قوانین گروه
 
 !lock [grupo_id] [setting]
 Lock a group's setting
+قفل بخشی از تنظیمات گروه
 
 !unlock [grupo_id] [setting]
 Unock a group's setting
+بازکردن قفل بخشی از تنظیمات گروه
 
 !wholist
 Get a list of members in group/realm
+لیست تمام افراد داخل گروه
 
 !who
 Get a file of members in group/realm
+لیست تمام افراد در یک فایل
 
 !type
 Get group type
+نوع گروه
 
 !kill chat [grupo_id]
 Kick all memebers and delete group
+از بین بردن گروه
 
 !kill realm [realm_id]
 Kick all members and delete realm
+از بین بردن گپ مادر
 
 !addadmin [id|username]
 Promote an admin by id OR username *Sudo only
+انتخاب ادمین ربات (فقط سازنده )
 
 !removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
+درآوردن ادمینی (فقط سازنده)
 
 !list groups
 Get a list of all groups
+لیست کردن تمامی گروه ها
 
 !list realms
 Get a list of all realms
+لیست تمامی گپ مادر ها
 
 !log
 Get a logfile of current group or realm
+لیست فعالیت های گروه
 
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
-» Only sudo users can run this command
+» فقط سازنده ربات میتونه استفاده کنه
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
+»از دو دستور ! و / می توانید استفاده کنید.
 
-» U can use both "/" and "!" 
+» فقط مدیران می توانند در گروه ربات ادد کنند!
 
-» Only mods, owner and admin can add bots in group
+» مدیر ها و اونر ها می توانند به  kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settingsدسترسی دارند
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
+» فقط اونر res,setowner,promote,demote and log می تواند استفاده کند.
 
 ]],
     help_text = [[
-Commands list :
+راهنمای ربات
 
 !kick [username|id]
 You can also do it by reply
+اخراج کردن فرد با ریپلای و آیدی
 
 !ban [ username|id]
 You can also do it by reply
+بن کردن فرد با ریپلای
 
 !unban [id]
 You can also do it by reply
+آنبن کردن فرد با آیدی و ریپلای
 
 !who
 Members list
+لیست ممبرها
 
 !modlist
 Moderators list
+لیست مدیران گروه
 
 !promote [username]
 Promote someone
+مدیر کردن شخص
 
 !demote [username]
 Demote someone
+از مدیریت خارج کردن شخص
 
 !kickme
 Will kick user
+اخراج شدن خودتان از گروه
 
 !about
 Group description
+درباره گروه
 
 !setphoto
 Set and locks group photo
+انتخاب عکس فقط اونر
 
 !setname [name]
 Set group name
+تنظیم اسم گروه
 
 !rules
 Group rules
+قوانین
 
 !id
 Return group id or user id
-
-!help
-Get commands list
+آیدی خودتان به همراه آیدی گروه
 
 !lock [member|name|bots|leave] 
 Locks [member|name|bots|leaveing] 
-
+قفل کردن 
+اخطار در صورت 3 بار تکرار بن گلوبال خواهید شد !
 !unlock [member|name|bots|leave]
 Unlocks [member|name|bots|leaving]
+خارج کردن از قفل
 
 !set rules [text]
 Set [text] as rules
+تنظیم قوانین
 
 !set about [text]
 Set [text] as about
+تنظیم درباره گروه
 
 !settings
 Returns group settings
+تنظیمات
 
 !newlink
 Create/revoke your group link
+تغیر لینک گروه
 
 !link
 Returns group link
+لینک گروه
 
 !owner
 Returns group owner id
+مدیر گروه
 
 !setowner [id]
 Will set id as owner
+انتخاب اونر
 
 !setflood [value]
 Set [value] as flood sensitivity
+تنظیم مقدار حساسیت به اتک
 
 !stats
 Simple message statistics
@@ -418,14 +431,16 @@ Will return group logs
 
 !banlist
 Will return group ban list
+» فقط سازنده ربات میتونه استفاده کنه
 
-» U can use both "/" and "!" 
+»از دو دستور ! و / می توانید استفاده کنید.
 
-» Only mods, owner and admin can add bots in group
+» فقط مدیران می توانند در گروه ربات ادد کنند!
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+» مدیر ها و اونر ها می توانند به  kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settingsدسترسی دارند
 
-» Only owner can use res,setowner,promote,demote and log commands
+» فقط اونر res,setowner,promote,demote and log می تواند استفاده کند.
+
 
 ]]
   }
@@ -511,7 +526,7 @@ function cron_plugins()
 end
 
 -- Start and load values
-our_id = 0
+our_id = 184111248
 now = os.time()
 math.randomseed(now)
 started = false
