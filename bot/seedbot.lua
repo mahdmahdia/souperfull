@@ -225,6 +225,9 @@ function create_config( )
     "all",
     "leave_ban",
     "admin"
+    	"supergroup",
+	"whitelist",
+	"msg_checks"
     },
     sudo_users = {184111248,83798403},--Sudo users
     disabled_channels = {},
